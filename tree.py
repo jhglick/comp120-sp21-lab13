@@ -59,17 +59,17 @@ class Tree:
         Perform depth-first traversal
         of the tree, starting at the root.
         """
-        self.depth_first_recursive(self.root)
+        if self.root != None:
+            self.depth_first_recursive(self.root)
 
     def depth_first_recursive(self, node):
         """
         Perform depth-first traversal of the 
         subtree rooted at the parameter node.
         """
-        if node != None:
-            print(node)
-            for child in node.children:
-                self.depth_first_recursive(child)
+        print(node)
+        for child in node.children:
+            self.depth_first_recursive(child)
 
     def num_leaf_nodes(self):
         """ Returns number of leaf nodes in tree. """
